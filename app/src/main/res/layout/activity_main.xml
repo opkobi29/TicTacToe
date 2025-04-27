@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <!-- 9 buttons -->
+        <Button android:id="@+id/button0" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button1" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button2" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button3" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button4" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button5" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button6" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button7" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/button8" style="@style/TicTacToeButton"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X's Turn"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/buttonRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
