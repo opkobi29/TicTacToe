@@ -44,11 +44,11 @@ class MainActivity : AppCompatActivity() {
         buttons[index].setTextColor(if (currentPlayer == "X") Color.BLUE else Color.RED)
 
         if (checkWin()) {
-            textViewTurn.text = "$currentPlayer Wins!"
+            textViewTurn.text = getString(R.string.x_wins, currentPlayer)
             buttonRestart.visibility = View.VISIBLE
             disableButtons()
         } else if (board.all { it.isNotEmpty() }) {
-            textViewTurn.text = "It's a Tie!"
+            textViewTurn.text = getString(R.string.its_a_tie)
             textViewTurn.setBackgroundColor("#800080".toColorInt())
             buttonRestart.visibility = View.VISIBLE
         } else {
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateTurnDisplay() {
-        textViewTurn.text = "$currentPlayer's Turn"
+        textViewTurn.text = getString(R.string.turn, currentPlayer)
         textViewTurn.setBackgroundColor(if (currentPlayer == "X") Color.BLUE else Color.RED)
     }
 
@@ -96,3 +96,8 @@ class MainActivity : AppCompatActivity() {
         buttonRestart.visibility = View.GONE
     }
 }
+
+    private fun onButtonClick(i: Int) {
+
+    }
+
